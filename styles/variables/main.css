@@ -20,8 +20,8 @@
     /*HEADER BEGIN*/
     /*HEADER END*/
     /*CONTENT BEGIN*/
+    /*CONTENT BEGIN*/
     /*CONTENT END*/
-    /*FOOTER BEGIN*/
     /*FOOTER END*/
   }
   html body .wrapper header {
@@ -36,23 +36,19 @@
   html body .wrapper header nav {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
     flex: 1 0 auto;
   }
   html body .wrapper header nav ul {
     list-style: none;
     display: flex;
     flex-grow: 1;
-    justify-content: flex-end;
+    justify-content: space-around;
   }
   html body .wrapper header nav ul .current a {
     background-color: #0000ff;
     color: #ffffff;
     border: 1px solid #000000;
     border-radius: 4px;
-  }
-  html body .wrapper header nav ul li {
-    float: right;
   }
   html body .wrapper header nav ul li a:hover {
     background-color: #0000ff;
@@ -68,9 +64,23 @@
     padding: 3px 15px;
     border-radius: 4px;
   }
-  html body .wrapper .content {
+  html body .wrapper .content .main {
     flex-grow: 1;
     background-color: cornsilk;
+    background: url(../pictures/png/main.png) no-repeat 50% 0;
+    float: left;
+    height: 100%;
+  }
+  html body .wrapper .content {
+    flex-grow: 1;
+    position: relative;
+  }
+  html body .wrapper .content .main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background: url(../pictures/png/main.png) no-repeat 50% 0;
     float: left;
     height: 100%;
@@ -112,11 +122,11 @@
   html body .wrapper header {
     display: flex;
     background-color: #ffffff;
-    flex: 0 0 100px;
+    flex: 0 0 120px;
     /*border-radius: 10px 10px 0 0;*/
   }
   html body .wrapper header h1 {
-    padding: 5px 0 0 20px;
+    padding: 25px 0 0 20px;
   }
   html body .wrapper header nav {
     display: flex;
@@ -130,12 +140,15 @@
     flex-grow: 1;
     justify-content: space-between;
     flex-direction: column;
+    width: 50px;
   }
   html body .wrapper header nav ul .current a {
     background-color: #0000ff;
     color: #ffffff;
     border: 1px solid #000000;
     border-radius: 4px;
+    display: block;
+    width: 70px;
   }
   html body .wrapper header nav ul li a:hover {
     background-color: #0000ff;
@@ -144,7 +157,9 @@
     padding: 3px 15px;
   }
   html body .wrapper header nav ul li a {
-    width: 20px;
+    display: block;
+    width: 70px;
+    float: right;
     color: darkgrey;
     text-transform: uppercase;
     text-decoration: none;
@@ -154,7 +169,14 @@
   }
   html body .wrapper .content {
     flex-grow: 1;
-    background-color: cornsilk;
+    position: relative;
+  }
+  html body .wrapper .content .main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background: url(../pictures/png/main.png) no-repeat 50% 0;
     float: left;
     height: 100%;

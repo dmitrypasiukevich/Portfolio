@@ -28,13 +28,11 @@
           nav {
             margin-top: 20px;
             display: flex;
-            justify-content: space-between;
             flex: 1 0 auto;
             ul {list-style: none;
               display: flex;
               flex-grow: 1;
-              justify-content: flex-end;
-
+              justify-content: space-around;
               .current a{
                 background-color: #0000ff;
                 color: #ffffff;
@@ -43,16 +41,12 @@
 
               }
               li {
-                float: right;
-
-
                 & a:hover {
                   background-color: #0000ff;
                   color: #ffffff;
                   border-radius: 4px;
                   padding: 3px 15px;
                 }
-
                 a {
                   color: darkgrey;
                   text-transform: uppercase;
@@ -68,14 +62,30 @@
         /*HEADER END*/
         /*CONTENT BEGIN*/
         .content {
+          .main {
+            flex-grow: 1;
+            background-color: cornsilk;
+            background: url(../pictures/png/main.png) no-repeat 50% 0;
+            float: left;
+            height: 100%;
+          }
+        }
+        /*CONTENT BEGIN*/
+        .content {
           flex-grow: 1;
-          background-color: cornsilk;
-          background: url(../pictures/png/main.png) no-repeat 50% 0;
-      float: left;
-      height: 100%;
+          position: relative;
+          .main {
+            position: absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            background: url(../pictures/png/main.png) no-repeat 50% 0;
+            float: left;
+            height: 100%;
+          }
         }
         /*CONTENT END*/
-        /*FOOTER BEGIN*/
         .footer {
           flex: 0 0 50px;
           footer{
@@ -109,10 +119,10 @@
         header{
           display: flex;
           background-color: #ffffff;
-          flex: 0 0 100px;
+          flex: 0 0 120px;
           /*border-radius: 10px 10px 0 0;*/
           h1 {
-            padding: 5px 0 0 20px;
+            padding: 25px 0 0 20px;
 
           }
           nav {
@@ -125,13 +135,15 @@
               flex-grow: 1;
               justify-content:space-between;
               flex-direction: column;
+              width: 50px;
 
               .current a{
                 background-color: #0000ff;
                 color: #ffffff;
                 border: 1px solid #000000;
                 border-radius: 4px;
-
+                display: block;
+                width: 70px;
               }
               li {
                 & a:hover {
@@ -142,7 +154,10 @@
                 }
 
                 a {
-                  width: 20px;
+                  display: block;
+                  width: 70px;
+                  float: right;
+
                   color: darkgrey;
                   text-transform: uppercase;
                   text-decoration: none;
@@ -158,10 +173,17 @@
         /*CONTENT BEGIN*/
         .content {
           flex-grow: 1;
-          background-color: cornsilk;
-          background: url(../pictures/png/main.png) no-repeat 50% 0;
-          float: left;
-          height: 100%;
+          position: relative;
+          .main {
+            position: absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            background: url(../pictures/png/main.png) no-repeat 50% 0;
+            float: left;
+            height: 100%;
+          }
         }
         /*CONTENT END*/
         /*FOOTER BEGIN*/
